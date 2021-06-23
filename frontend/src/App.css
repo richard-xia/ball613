@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Source+Sans+Pro&family=Oleo+Script&family=Dela+Gothic+One&family=Atma&display=swap');
+
+/* ----- RESET ----- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background-color: #e2efff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: calc(100% - calc(4.8rem * 2));
+  max-width: 600px;
+  padding: 2.8rem;
+  margin-bottom: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.7rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-1rem);
+  backdrop-filter: blur(1.5rem);
+}
+
+.item:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.item h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  height: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.item figure {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.item figure img {
+  height: 320px;
+  display: block;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: calc(100% - calc(2.8rem * 2));
+  height: 320px;
+  line-height: 1.75rem;
+  padding: 2.5rem;
+  position: absolute;
+  top: calc(2.8rem + 3.3rem);
+  left: 2.8rem;
+  overflow: auto;
+  opacity: 0;
+  border-radius: 1.5rem;
+  transition: opacity 200ms ease-out;
+}
+
+.item figure:hover + .description,
+.description:hover {
+  opacity: 1;
+}
